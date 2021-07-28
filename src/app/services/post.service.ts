@@ -8,14 +8,13 @@ import {IPosts} from "../models/IPosts";
   }
 )
 export class PostService {
-  private url="https://jsonplaceholder.typicode.com/posts"
-  constructor(private httpClient:HttpClient) {
+  private url = "https://jsonplaceholder.typicode.com/posts"
+
+  constructor(private httpClient: HttpClient) {
   }
-getAllPosts():Observable<IPosts[]>{
+
+  getPosts(): Observable<IPosts[]> {
     return this.httpClient.get<IPosts[]>(this.url)
-}
-getPostById(id:number):Observable<IPosts>{
-  return this.httpClient.get<IPosts>(this.url +"/"+ id)
   }
 
 }

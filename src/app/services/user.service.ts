@@ -10,14 +10,10 @@ export class UserService {
   private url = "https://jsonplaceholder.typicode.com/users"
 
   constructor(private httpClient: HttpClient) {
-
   }
 
-getAllUsers():Observable<IUsers[]>{
-    return this.httpClient.get<IUsers[]>(this.url)
-}
-getUserById(id:number):Observable<IUsers>{
-    return this.httpClient.get<IUsers>(this.url + '/'+id)
-}
+  getUsers(): Observable<IUsers[]> {
+    return this.httpClient.get<IUsers[]>(this.url);
+  }
 
 }
