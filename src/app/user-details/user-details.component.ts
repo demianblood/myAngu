@@ -18,7 +18,7 @@ export class UserDetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe(({id}) => {
 
       this.userService.getUserById(id).subscribe(value => this.user = value);
-      console.log(this.user.name)
+
     })
   }
 
