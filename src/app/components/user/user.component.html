@@ -1,8 +1,15 @@
-<p>{{user.id}} {{user.name}} {{user.username}} {{user.emai}}</p>
-<hr>Address: {{user.address.street}} {{user.address.suite}} {{user.address.city}} {{user.address.zipcode}}
-{{user.phone}}
-<hr>Company: {{user.company.name}}{{user.company.catchPrase}}{{user.company.bs}}
-{{user.website}}
-<hr>
+<p>{{user.id}}-{{user.name}} <a routerLink="/users/{{user.id}}">details</a></p>
+
+
 <hr>
 
+<!--<hr>Address:-->
+<!--<br>-->
+<!--{{user.address.street}} {{user.address.suite}} {{user.address.city}} {{user.address.zipcode}}-->
+<!--{{user.phone}}-->
+<!--<hr>Company:-->
+<!--<br>-->
+<!--{{user.company.name}}{{user.company.catchPrase}}{{user.company.bs}}-->
+<!--{{user.website}}-->
+<!--<hr>-->
+<!--<button (click)="">details</button>-->

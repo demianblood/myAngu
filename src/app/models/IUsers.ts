@@ -1,23 +1,25 @@
-export interface IUser {
+export interface IUsers {
   id:number;
   name:string;
   username:string;
-  emai:string;
-  address:{
-    street:string;
+  email:string;
+  address?:{street:string;
     suite:string;
     city:string;
     zipcode:string;
     geo:{
       lat:string;
       lng:string;
-    }
-  }
+    }}
   phone:string;
   website:string;
-  company:{
-    name:string;
+  company?:{name:string;
     catchPrase:string;
-    bs:string;
-  }
+    bs:string;}
 }
+
+
+
+
+
+
