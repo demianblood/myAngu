@@ -30,13 +30,13 @@ export let routes: Routes =
       canDeactivate: [PostGuardService]
     },
     {
-      path: 'post/:id',
+      path: 'posts/:id',
       component: PostDetailsComponent,
       canActivate: [PostGuardService],
       canDeactivate: [PostGuardService]
     },
     {
-      path: 'post',
+      path: 'posts',
       redirectTo: '',
       pathMatch: 'full'
     }
