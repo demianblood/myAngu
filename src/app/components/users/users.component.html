@@ -1,1 +1,10 @@
-<p>users works!</p>
+<form #tref (ngSubmit)="submit(tref)">
+  <select name="user" [(ngModel)]="user">
+    <option value="{{this.user.id}}" *ngFor="let user of users">{{user.name}}</option>
+  </select>
+  <button>save</button>
+</form>
+
+
+
+

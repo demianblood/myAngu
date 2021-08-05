@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {IUsers} from "../../models/IUsers";
+import {UserService} from "../../services/user.service";
+import {createContentChildren} from "@angular/compiler/src/core";
 
 
 @Component({
@@ -8,12 +10,16 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-
-  constructor(private activatedRoute:ActivatedRoute) {
-    this.activatedRoute.data.subscribe(value => console.log(value))
+  users: IUsers[];
+  user:IUsers;
+  constructor(private userService: UserService) {
+    this.userService.getUsers().subscribe(value => this.users = value);
   }
 
   ngOnInit(): void {
-  }
 
+  }
+  submit(tref: HTMLFormElement) {
+    console.log(tref.user.value );
+  }
 }
