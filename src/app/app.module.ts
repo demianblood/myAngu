@@ -6,18 +6,12 @@ import {RouterModule} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TdFormComponent } from './components/td-form/td-form.component';
-import { UsersComponent } from './components/users/users.component';
-import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TdFormComponent,
-    UsersComponent,
-    UserComponent,
-
-
   ],
   imports: [
     BrowserModule,
