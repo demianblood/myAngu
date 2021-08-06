@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IPosts} from "../../models/IPosts";
-import {Router} from "@angular/router";
+import {IPosts} from "../../../../models/IPosts";
 
 @Component({
   selector: 'app-post',
@@ -8,14 +7,11 @@ import {Router} from "@angular/router";
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  @Input()
-  post: IPosts
-constructor(private router:Router) {
-}
+@Input()
+post:IPosts
+  constructor() { }
+
   ngOnInit(): void {
   }
 
-  navigateToPostDetails(): void {
-this.router.navigate(['posts'])
-  }
 }

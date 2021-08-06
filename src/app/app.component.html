@@ -1,12 +1,6 @@
-<!--<h1>{{title}}</h1>-->
-<!--<ul>-->
-<!--  <li *ngFor="let user of users">-->
-<!--    <div *ngIf="user.status">{{user.name}}</div>-->
-<!--  </li>-->
-<!--</ul>-->
+
 <h1>{{title}}</h1>
-<ul>
-  <li><a routerLink="/users">users page</a></li>
-  <li><a routerLink="/posts">posts page</a></li>
-</ul>
+<a routerLink="users">load users</a>
+<br>
+<a routerLink="posts">load posts</a>
 <router-outlet></router-outlet>
