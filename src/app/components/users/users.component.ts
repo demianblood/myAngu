@@ -11,15 +11,18 @@ import {createContentChildren} from "@angular/compiler/src/core";
 })
 export class UsersComponent implements OnInit {
   users: IUsers[];
-  user:IUsers;
+  user: IUsers;
+ 
+
   constructor(private userService: UserService) {
     this.userService.getUsers().subscribe(value => this.users = value);
   }
 
   ngOnInit(): void {
-
+console.log(this.user)
   }
+
   submit(tref: HTMLFormElement) {
-    console.log(tref.user.value );
+    console.log(tref.user.value)
   }
 }
