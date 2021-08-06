@@ -1,7 +1,14 @@
-<!--<form #tref (ngSubmit)="save(tref)">-->
-<!--  <select name="user" id="id">-->
-<!--    <option value="username">{{user.username}}</option>-->
-<!--    <option value="user">{{user.user}}</option>-->
-<!--  </select>-->
-<!--  <button>save</button>-->
-<!--</form>-->
+<form #tref (ngSubmit)="save(tref)">
+  <select name="name" [(ngModel)]="userId">
+<option *ngFor="let user of users"value="{{user.id}}">{{user.name}}</option>
+  </select>
+  <button>save</button>
+</form>
+<h3>{{user?.name}}-{{user?.username}}
+  <br>
+  {{user?.email}}
+</h3>
+{{user?.address?.city}} {{user?.address?.street}}
+<br>
+{{user?.phone}}  {{user?.website}}
+<br>{{user?.company?.name}} {{user?.company?.catchPhrase}}  {{user?.company?.bs}}
