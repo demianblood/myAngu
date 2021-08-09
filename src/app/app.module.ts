@@ -5,13 +5,18 @@ import {AppComponent} from './app.component';
 import {RouterModule} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { TdFormComponent } from './components/td-form/td-form.component';
+import { ReactiveFormComponent } from './components/users/reactive-form/reactive-form.component';
+import { UsersComponent } from './components/users/users.component';
+import { UserComponent } from './components/users/user/user.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TdFormComponent,
+    ReactiveFormComponent,
+    UsersComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

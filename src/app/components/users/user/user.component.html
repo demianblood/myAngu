@@ -1,9 +1,3 @@
-<form #tref (ngSubmit)="save(tref)">
-  <select name="name" [(ngModel)]="userId">
-<option *ngFor="let user of users"value="{{user.id}}">{{user.name}}</option>
-  </select>
-  <button>save</button>
-</form>
 <h3>{{user?.name}}-{{user?.username}}
   <br>
   {{user?.email}}
