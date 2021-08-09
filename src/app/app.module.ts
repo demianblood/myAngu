@@ -1,24 +1,30 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {routes} from "./components/routes/basic.routes";
-import {AppComponent} from './app.component';
-import {RouterModule} from "@angular/router";
+import {AppComponent} from './components/app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { TdFormComponent } from './components/td-form/td-form.component';
+
+import { HomeComponent } from './components/home/home.component';
+import { NavComponent } from './components/home/nav/nav.component';
+import { CarsComponent } from './components/home/cars/cars.component';
+import { CarComponent } from './components/home/cars/car/car.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TdFormComponent,
+    HomeComponent,
+    NavComponent,
+    CarsComponent,
+    CarComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
